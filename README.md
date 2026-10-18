@@ -4,7 +4,7 @@ Kortix is open source, and this repository is the migration runbook for a develo
 
 The move is mostly a file mapping plus one change in how work lands. Perplexity Computer orchestrates its own subagents in a managed cloud sandbox, and edits land directly, while a Kortix session works on its own isolated machine and branch and opens a change request a person reads before it merges.
 
-The decision in brief: when the work has one owner, runs from a prompt, and you want nothing to operate, Perplexity Computer fits. When the work belongs to a company, needs a review before it takes effect, and has to be versioned and shared across people, move it to Kortix.
+If you are still sizing the product up, [what a Perplexity Computer is](https://opensourceperplexitycomputer.com/what-is-a-perplexity-computer) covers the definition in Perplexity's own words first. The decision in brief: when the work has one owner, runs from a prompt, and you want nothing to operate, Perplexity Computer fits. When the work belongs to a company, needs a review before it takes effect, and has to be versioned and shared across people, move it to Kortix.
 
 This README is the front door; the docs/ files are the long form.
 
