@@ -4,7 +4,7 @@ Kortix is open source, and this runbook is the ordered move from a closed cloud 
 
 ## Before you start
 
-Two accounts and one host are the whole prerequisite list. On Kortix you can start on Kortix Cloud with nothing installed, or self-host the same system on a Linux box you control. Self-host is free, and you run it on Kortix Cloud, in your VPC, or on your own on-prem network. Keep the Perplexity subscription running until the last step, so you can compare outputs while you rebuild.
+Two accounts and one host are the whole prerequisite list. On Kortix you can start on Kortix Cloud with nothing installed, or self-host the same system on a Linux box you control. Self-host is free. Keep the Perplexity subscription running until the last step, so you can compare outputs while you rebuild.
 
 Collect three things from your Perplexity Computer use before you stop: the list of connectors you actually used, the recurring tasks and monitors you set up, and notes on the outcomes you got from each. Perplexity Computer keeps its memory and skills inside the product, so these notes are what you rebuild from rather than a file you copy out. It helps to know the failure modes you are leaving: the [review of Perplexity Computer](https://opensourceperplexitycomputer.com/perplexity-computer-review) collects them from the hands-on reviews.
 
@@ -32,13 +32,13 @@ One decision moves here. Perplexity Computer routes each subtask across about 19
 
 ## Step 5: Reconnect your tools as connectors
 
-Perplexity Computer reaches services such as Slack, Gmail, GitHub and Notion through more than 400 managed OAuth connectors, and the review found the working ones uneven in practice. On Kortix, each service is a connector account, and credentials are project secrets. Reconnect the services on your list, and set the reach for each one. Connector credentials are brokered server-side and never enter the machine, and secrets are encrypted at rest with a key per project.
+Perplexity Computer reaches services such as Slack, Gmail, GitHub and Notion through more than 400 managed OAuth connectors, and the review found the working ones uneven in practice. On Kortix, each service is a connector account, and credentials are project secrets. Reconnect the services on your list, and set the reach for each one.
 
 For each connector, set the action policy to Allow, Ask or Block. Approval holds the call, and the agent's turn pauses and resumes after the decision. This is the control Perplexity Computer does not expose: on a managed connector you take what the vendor ships.
 
 ## Step 6: Map the credit meter to agent runs and gates
 
-Perplexity Computer meters credits per task on top of the subscription, which is where a bad run gets expensive: in the Builder.io test a silent npm install failure burned 10,000 credits before a person read the logs. Kortix changes the shape of that cost. Self-host is free, and on Kortix Cloud free is $0 with 200 credits per month and 1 project, and the team plan is $40 per seat per month with 2,500 credits per month per seat, pooled (from the [Kortix pricing page](https://kortix.com/pricing), quoted as written).
+Perplexity Computer meters credits per task on top of the subscription, which is where a bad run gets expensive: in the Builder.io test a silent npm install failure burned 10,000 credits before a person read the logs. Kortix changes the shape of that cost. Self-host is free, and on Kortix Cloud free is $0 with 200 credits per month and 1 project; paid plans start at $50 a month for 5,000 credits, and members are free, sharing one credit pool (from the [Kortix pricing page](https://kortix.com/pricing), quoted as written).
 
 The bigger change is the gate. Approval gates you set. Off until you set them. Put an Ask on the step that spends real money or sends something outside the team, so a repeated failure stops at the gate instead of running the meter. You can also hold reach at the connector, down to the arguments of a single call. Model spend follows your own provider keys, so it is a bill you can read rather than a credit total you have to infer.
 
