@@ -15,7 +15,7 @@ A self-hosted instance needs a few things in place before the first start. The C
 - A Linux server with a public IP. The bootstrap installs Docker Engine and the Compose plugin when they are missing.
 - DNS records for your domain and for api.<domain>, both pointing at the server, plus a wildcard record for previews. Caddy needs them to issue the certificate.
 - Ports 80 and 443 open inbound.
-- A sandbox provider key: Daytona, Platinum or E2B. Without one, sessions do not start.
+- A sandbox provider key: Platinum or the legacy Daytona fallback. Without one, sessions do not start.
 - A model provider key, added in the web app after the first sign-in.
 
 ## Install in three commands
